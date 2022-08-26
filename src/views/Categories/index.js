@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { Header, Loader, Container } from 'semantic-ui-react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import _ from 'lodash';
-
 import { fetchCategories } from './actions';
 import { getCategories, getCategoriesFetching, categoryPropType, getCategoriesHasMore } from './reducer';
 import CategoriesList from './CategoriesList';

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-
 import { fetchProducts } from '../Products/actions';
 import { getProducts, getProductsFetching, productPropType } from '../Products/reducer';
 import ProductDetails from './ProductDetails';
@@ -41,9 +40,7 @@ class Product extends Component {
       );
     }
 
-    const product = this.props.products.find(
-      obj => obj.id === Number(this.props.match.params.productId),
-    );
+    const product = this.props.products.find(obj => obj.id === Number(this.props.match.params.productId));
 
     if (_.isNil(product)) {
       return <p>Product does not exist</p>;

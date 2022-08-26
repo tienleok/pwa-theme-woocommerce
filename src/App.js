@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Sidebar } from 'semantic-ui-react';
 import { withRouter } from 'react-router';
-
 import { isMenuVisible } from './components/NavBar/reducer';
 import { closeMenu } from './components/NavBar/actions';
 import NavBar from './components/NavBar';
@@ -62,9 +61,7 @@ const mapStateToProps = state => ({
   sideMenuVisible: isMenuVisible(state.navbar),
 });
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    { closeMenu },
-  )(App),
-);
+export default withRouter(connect(
+  mapStateToProps,
+  { closeMenu },
+)(App));

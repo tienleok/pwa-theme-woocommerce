@@ -8,16 +8,12 @@ export const productPropType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   permalink: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(
-    PropTypes.shape({
-      src: PropTypes.string.isRequired,
-    }),
-  ),
-  categories: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  images: PropTypes.arrayOf(PropTypes.shape({
+    src: PropTypes.string.isRequired,
+  })),
+  categories: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  })).isRequired,
   average_rating: PropTypes.string.isRequired,
   rating_count: PropTypes.number.isRequired,
   variations: PropTypes.arrayOf(PropTypes.number).isRequired,

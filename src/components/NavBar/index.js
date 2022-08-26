@@ -119,11 +119,9 @@ NavBar.propTypes = {
   openSearch: PropTypes.func.isRequired,
   closeSearch: PropTypes.func.isRequired,
   searchVisible: PropTypes.bool.isRequired,
-  cart: PropTypes.arrayOf(
-    PropTypes.shape({
-      quantity: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
+  cart: PropTypes.arrayOf(PropTypes.shape({
+    quantity: PropTypes.number.isRequired,
+  })).isRequired,
 };
 
 const mapStateToProps = state => ({

@@ -14,7 +14,6 @@ import Reviews from '../../components/Reviews';
 import Variations from '../../components/Variations';
 import SocialBox from './SocialBox';
 import config from '../../config/config';
-
 import './styles.css';
 
 class ProductDetails extends Component {
@@ -72,16 +71,14 @@ class ProductDetails extends Component {
     const { dispatch } = this.props;
     const product = this.props.product;
 
-    dispatch(
-      addProduct(
-        product.id,
-        product.name,
-        product.price,
-        product.images[0].src,
-        this.state.variationId,
-        this.state.selections,
-      ),
-    );
+    dispatch(addProduct(
+      product.id,
+      product.name,
+      product.price,
+      product.images[0].src,
+      this.state.variationId,
+      this.state.selections,
+    ));
 
     toastr.success('Added to Cart', product.name + ' was added to your shopping cart.');
   }
@@ -121,7 +118,7 @@ class ProductDetails extends Component {
           {this.props.product.price ?
             (<Card.Content>
               <div dangerouslySetInnerHTML={{ __html: config.CURRENCY + this.props.product.price }} />
-            </Card.Content>) : null}
+             </Card.Content>) : null}
           {this.props.product.variations.length === 0 ? null : (
             <Variations
               sendSelections={this.receiveSelections}

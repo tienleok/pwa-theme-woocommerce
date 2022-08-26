@@ -11,8 +11,13 @@
     "redux-devtools": "^3.4.1"
   },
   "dependencies": {
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "axios": "^0.21.1",
+    "crypto-js": "^4.1.1",
     "history": "^4.7.2",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.10",
+    "oauth-1.0a": "^2.2.6",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
